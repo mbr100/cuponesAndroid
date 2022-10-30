@@ -72,12 +72,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@id/btnConsult"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etCupon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/main_hint_cupon"
                 android:text="@={viewModel.coupon.code}"
-                android:contentDescription="@string/main_hint_cupon"/>
+                tools:ignore="EditableContentDescCheck,TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -91,14 +93,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@id/tilCupon"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etDescipcion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@={viewModel.coupon.descripcion}"
                 android:contentDescription="@string/main_hint_descripcion"
+                android:text="@={viewModel.coupon.descripcion}"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-                tools:text="Cupón válido por 10% en compras mayores a 10€"/>
+                tools:ignore="EditableContentDescCheck,EditableContentDescCheck,TextContrastCheck"
+                tools:text="Cupón válido por 10% en compras mayores a 10€" />
         </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,7 +23,7 @@ class MainViewModel: ViewModel() {
         coupon.value?.code?.let { code ->
             viewModelScope.launch {
                 hideKeyboard.value = true
-                coupon.value = repository.consultCouponByCode(code)
+                coupon.value = repository.consultCouponByCode(code) ?: CouponEntity(code = code, isActive = false)
             }
         }
     }
@@ -33,6 +33,7 @@ class MainViewModel: ViewModel() {
             viewModelScope.launch {
                 hideKeyboard.value = true
                 try {
+                    couponEntity.isActive = true
                     repository.saveCoupon(couponEntity)
                     consultCouponByCode()
                     snackbarMsg.value = R.string.main_save_success
