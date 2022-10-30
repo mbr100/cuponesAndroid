@@ -16,6 +16,12 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
     }
 
     buildTypes {
@@ -37,6 +43,7 @@ android {
     kotlinOptions {
         jvmTarget = '11'
     }
+    buildToolsVersion '33.0.0'
 }
 
 
@@ -57,7 +64,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
 
     //Coroutines
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
 
     //LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"

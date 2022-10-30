@@ -67,7 +67,6 @@
             android:layout_height="wrap_content"
             android:hint="@string/main_hint_cupon"
             android:layout_marginBottom="@dimen/common_padding_default"
-            android:enabled="@{isActive}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@id/btnConsult"
