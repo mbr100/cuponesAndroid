@@ -1,7 +1,6 @@
 package com.marioborrego.cupones.mainModule.model
 
 import android.database.sqlite.SQLiteConstraintException
-import android.database.sqlite.SQLiteException
 import com.marioborrego.cupones.CouponsAplication
 import com.marioborrego.cupones.common.dataAccess.CouponDao
 import com.marioborrego.cupones.common.entities.CouponEntity

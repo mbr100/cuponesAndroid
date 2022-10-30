@@ -62,7 +62,7 @@ dependencies {
     //LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
 
-    // Kotlin
+    // Kotlin Data Binding
     implementation("androidx.activity:activity-ktx:1.6.1")
 
     testImplementation 'junit:junit:4.13.2'
